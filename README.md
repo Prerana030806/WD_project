@@ -26,13 +26,8 @@ That's it. One file.
 ## ▶️ How to Run
 
 Just open index.html in any browser. No installation needed.
-
-If using the Replit dev server:
-
-pnpm --filter @workspace/learnohub run dev
-
-Then visit the preview URL.
-
+https://prerana030806.github.io/WD_project/ 
+or download file and open in vs code then show preview
 ---
 
 ## 🛠️ Tech Stack
