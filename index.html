@@ -1,0 +1,565 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="LearnoHub — short lessons, real projects, and step-by-step learning paths." />
+    <title>LearnoHub — Learning Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <span class="brand-mark" aria-hidden="true">LH</span>
+          <span class="brand-name">LearnoHub</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="./courses.html">Courses</a>
+          <a href="#paths">Learning Paths</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#why">Why LearnoHub?</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="#paths">Explore paths</a>
+          <a class="btn btn-primary" href="./courses.html">Start learning</a>
+          <a class="btn btn-secondary" href="./login.html" data-auth="login">Login</a>
+          <a class="btn btn-ghost" href="./register.html" data-auth="register">Register</a>
+          <a class="btn btn-ghost" href="./dashboard.html" data-auth="dashboard" hidden>Dashboard</a>
+          <button class="btn btn-ghost" type="button" data-auth="logout" hidden>Logout</button>
+          <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <a href="./courses.html">Courses</a>
+        <a href="#paths">Learning Paths</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#why">Why LearnoHub?</a>
+        <a href="#faq">FAQ</a>
+        <a href="./login.html" data-auth="login">Login</a>
+        <a href="./register.html" data-auth="register">Register</a>
+        <a href="./dashboard.html" data-auth="dashboard" hidden>Dashboard</a>
+        <button class="mobile-btn" type="button" data-auth="logout" hidden>Logout</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="pill">
+              <span class="dot" aria-hidden="true"></span> New: Project-based learning tracks
+            </p>
+            <h1>Learn skills that get you hired — step by step</h1>
+            <p class="lead">
+              Learn by doing with short lessons and guided projects that build real skills. Finish
+              with portfolio-ready work you can show in interviews.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="./courses.html">Get started</a>
+              <a class="btn btn-secondary" href="./courses.html">Browse courses</a>
+            </div>
+
+            <div class="mini-stats" aria-label="Platform stats">
+              <div class="stat">
+                <div class="stat-value">120+</div>
+                <div class="stat-label">Courses</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">35</div>
+                <div class="stat-label">Learning paths</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">4.8/5</div>
+                <div class="stat-label">Learner rating</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" role="img" aria-label="Course progress preview">
+            <div class="glass">
+              <div class="card-top">
+                <div class="avatar" aria-hidden="true">P</div>
+                <div class="card-top-text">
+                  <div class="card-title">Your learning dashboard</div>
+                  <div class="card-subtitle">Keep momentum with daily goals</div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-row">
+                  <span>Frontend Foundations</span>
+                  <span class="muted">72%</span>
+                </div>
+                <div class="bar" aria-hidden="true">
+                  <span style="width: 72%"></span>
+                </div>
+              </div>
+
+              <div class="project">
+                <div class="project-head">
+                  <span class="tag">Project</span>
+                  <span class="muted">Due in 2 days</span>
+                </div>
+                <div class="project-body">
+                  Build a responsive landing page with a course grid and a “Why choose us?” section.
+                </div>
+              </div>
+
+              <div class="chips" aria-hidden="true">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Responsive</span>
+                <span>Portfolio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="strip">
+        <div class="container strip-inner">
+          <div class="strip-item">
+            <div class="strip-ico" aria-hidden="true">⚡</div>
+            <div>
+              <div class="strip-title">Fast lessons</div>
+              <div class="strip-desc">10–15 minutes each</div>
+            </div>
+          </div>
+          <div class="strip-item">
+            <div class="strip-ico" aria-hidden="true">🧩</div>
+            <div>
+              <div class="strip-title">Real projects</div>
+              <div class="strip-desc">Portfolio-ready builds</div>
+            </div>
+          </div>
+          <div class="strip-item">
+            <div class="strip-ico" aria-hidden="true">📈</div>
+            <div>
+              <div class="strip-title">Track progress</div>
+              <div class="strip-desc">Streaks & milestones</div>
+            </div>
+          </div>
+          <div class="strip-item">
+            <div class="strip-ico" aria-hidden="true">🎓</div>
+            <div>
+              <div class="strip-title">Certificates</div>
+              <div class="strip-desc">Shareable completion</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="courses">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Popular courses</h2>
+              <p class="muted">Build skills with lessons that end in mini-projects.</p>
+            </div>
+            <a class="link" href="#paths">See learning paths →</a>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <div class="card-badge">Beginner</div>
+              <h3>HTML &amp; CSS</h3>
+              <p class="muted">
+                Learn structure + styling from scratch, then build responsive sections you can reuse
+                in real websites.
+              </p>
+              <div class="card-meta">
+                <span>12 lessons</span><span>•</span><span>3 projects</span><span>•</span><span>Beginner</span>
+              </div>
+              <ul class="mini-list">
+                <li>Semantic HTML + accessibility basics</li>
+                <li>Flexbox + Grid + responsive layout</li>
+                <li>3 portfolio-ready mini projects</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-small btn-secondary" href="./course-html-css.html">View course</a>
+                <a class="btn btn-small btn-ghost" href="./register.html">Enroll</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-badge badge-alt">Intermediate</div>
+              <h3>JavaScript</h3>
+              <p class="muted">
+                Master the DOM, events, and logic by building mini apps like a to-do list, quiz, and
+                a simple expense tracker.
+              </p>
+              <div class="card-meta">
+                <span>Intermediate</span><span>•</span><span>DOM + mini apps</span>
+              </div>
+              <ul class="mini-list">
+                <li>DOM, events, forms + validation</li>
+                <li>Build mini apps (quiz, to-do, tracker)</li>
+                <li>Debugging + clean code habits</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-small btn-secondary" href="./course-javascript.html">View course</a>
+                <a class="btn btn-small btn-ghost" href="./register.html">Enroll</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-badge">Beginner</div>
+              <h3>Python Basics</h3>
+              <p class="muted">
+                Learn core Python, problem solving, and clean code fundamentals through practice
+                questions and small scripts.
+              </p>
+              <div class="card-meta">
+                <span>Beginner</span><span>•</span><span>Problem solving</span><span>•</span><span>Mini projects</span>
+              </div>
+              <ul class="mini-list">
+                <li>Core Python + problem solving patterns</li>
+                <li>Mini projects (CLI tools + scripts)</li>
+                <li>Files, functions, debugging basics</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-small btn-secondary" href="./course-python.html">View course</a>
+                <a class="btn btn-small btn-ghost" href="./register.html">Enroll</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-badge badge-alt">Intermediate</div>
+              <h3>Git & GitHub</h3>
+              <p class="muted">
+                Learn version control, teamwork workflows, and how to showcase projects using
+                branches, commits, and pull requests.
+              </p>
+              <div class="card-meta">
+                <span>Version control</span><span>•</span><span>Teamwork</span><span>•</span><span>GitHub projects</span>
+              </div>
+              <ul class="mini-list">
+                <li>Commits, branches, merges, conflicts</li>
+                <li>GitHub PRs, reviews, issues</li>
+                <li>Portfolio-ready repo workflow</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-small btn-secondary" href="./course-git-github.html">View course</a>
+                <a class="btn btn-small btn-ghost" href="./register.html">Enroll</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="paths">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Learning paths</h2>
+              <p class="muted">Step-by-step tracks with a clear duration and outcomes.</p>
+            </div>
+          </div>
+
+          <div class="paths">
+            <div class="path">
+              <h3>Frontend Developer</h3>
+              <p class="muted">
+                Learn HTML, CSS, and JavaScript with responsive design, then finish with a complete
+                portfolio project.
+              </p>
+              <ul class="ticks">
+                <li><strong>Duration:</strong> 6–8 weeks</li>
+                <li><strong>Includes:</strong> HTML, CSS, JavaScript, Responsive Design</li>
+                <li><strong>Outcome:</strong> 1 portfolio website + 2 mini projects</li>
+                <li><strong>Capstone:</strong> Responsive portfolio project</li>
+              </ul>
+            </div>
+            <div class="path">
+              <h3>Python Developer</h3>
+              <p class="muted">
+                Start from Python basics and build mini projects, then move into simple apps you can
+                expand later.
+              </p>
+              <ul class="ticks">
+                <li><strong>Duration:</strong> 6–8 weeks</li>
+                <li><strong>Includes:</strong> Python basics, mini projects, simple apps</li>
+                <li><strong>Outcome:</strong> 3–5 small programs + 1 simple app</li>
+                <li><strong>Skills:</strong> logic, functions, files, debugging</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Testimonials">
+        <div class="container">
+          <div class="quote">
+            <p>
+              "I finished the Frontend path and built 3 portfolio projects in a month. The lessons
+              are short, clear, and the UI is beautiful."
+            </p>
+            <div class="quote-by">
+              <div class="avatar small" aria-hidden="true">A</div>
+              <div>
+                <div class="quote-name">Aarav S.</div>
+                <div class="muted">Junior Web Developer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="reviews" aria-label="Reviews">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Learner reviews</h2>
+              <p class="muted">Simple, honest feedback from learners building skills.</p>
+            </div>
+          </div>
+
+          <div class="reviews">
+            <article class="review">
+              <div class="review-top">
+                <div class="avatar small" aria-hidden="true">R</div>
+                <div>
+                  <div class="review-name">Riya K.</div>
+                  <div class="muted">Beginner • Frontend</div>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+              <p class="muted">
+                The modules are short and clear. I finally understood Flexbox and built a landing page
+                I can show in interviews.
+              </p>
+            </article>
+
+            <article class="review">
+              <div class="review-top">
+                <div class="avatar small" aria-hidden="true">A</div>
+                <div>
+                  <div class="review-name">Aditya P.</div>
+                  <div class="muted">Intermediate • JavaScript</div>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+              <p class="muted">
+                The mini apps are the best part. The quiz generator helped me revise DOM events fast
+                before my college practical.
+              </p>
+            </article>
+
+            <article class="review">
+              <div class="review-top">
+                <div class="avatar small" aria-hidden="true">S</div>
+                <div>
+                  <div class="review-name">Sneha M.</div>
+                  <div class="muted">Beginner • Python</div>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+              <p class="muted">
+                Great for basics + practice. The problems are beginner-friendly and the projects made
+                coding feel less scary.
+              </p>
+            </article>
+
+            <article class="review">
+              <div class="review-top">
+                <div class="avatar small" aria-hidden="true">V</div>
+                <div>
+                  <div class="review-name">Vikram S.</div>
+                  <div class="muted">Student • Git/GitHub</div>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+              <p class="muted">
+                I learned PRs and merge conflicts in one day. Now my group project has proper commits
+                and a clean GitHub repo.
+              </p>
+            </article>
+
+            <article class="review">
+              <div class="review-top">
+                <div class="avatar small" aria-hidden="true">N</div>
+                <div>
+                  <div class="review-name">Neel J.</div>
+                  <div class="muted">Fresher • Portfolio</div>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+              <p class="muted">
+                The dashboard keeps me consistent. I liked how every module ends with a small task
+                and a project idea.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="why">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Why LearnoHub?</h2>
+              <p class="muted">Simple learning that turns into real, showable skills.</p>
+            </div>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <div class="card-badge">Focused</div>
+              <h3>Short lessons (10–15 min)</h3>
+              <p class="muted">Learn in small steps so you can stay consistent every day.</p>
+            </article>
+            <article class="card">
+              <div class="card-badge badge-alt">Hands-on</div>
+              <h3>Project-based learning</h3>
+              <p class="muted">Practice each topic by building something small and useful.</p>
+            </article>
+            <article class="card">
+              <div class="card-badge">Career</div>
+              <h3>Build your portfolio</h3>
+              <p class="muted">Create projects you can upload to GitHub and share with recruiters.</p>
+            </article>
+            <article class="card">
+              <div class="card-badge badge-alt">Easy start</div>
+              <h3>Beginner-friendly</h3>
+              <p class="muted">Clear explanations, guided steps, and no prior experience needed.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>FAQ</h2>
+              <p class="muted">Quick answers before you begin.</p>
+            </div>
+          </div>
+
+          <div class="faq2" data-accordion>
+            <div class="faq2-item">
+              <button class="faq2-q" type="button" aria-expanded="false">
+                Do I need experience to start?
+                <span class="faq2-ico" aria-hidden="true">+</span>
+              </button>
+              <div class="faq2-a" hidden>
+                <p class="muted">
+                  No. Start with the beginner courses. Each module has practice + a mini project so you
+                  learn step by step.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq2-item">
+              <button class="faq2-q" type="button" aria-expanded="false">
+                How do the quizzes work?
+                <span class="faq2-ico" aria-hidden="true">+</span>
+              </button>
+              <div class="faq2-a" hidden>
+                <p class="muted">
+                  On every course page you can generate a short quiz. It picks random questions and shows
+                  your score instantly.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq2-item">
+              <button class="faq2-q" type="button" aria-expanded="false">
+                Is this a real login system?
+                <span class="faq2-ico" aria-hidden="true">+</span>
+              </button>
+              <div class="faq2-a" hidden>
+                <p class="muted">
+                  This is a demo login using browser storage (no backend). It’s perfect for college
+                  projects and easy to explain in viva.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq2-item">
+              <button class="faq2-q" type="button" aria-expanded="false">
+                What will I build by the end?
+                <span class="faq2-ico" aria-hidden="true">+</span>
+              </button>
+              <div class="faq2-a" hidden>
+                <p class="muted">
+                  You’ll build small apps (JS), scripts (Python), and a portfolio website you can upload
+                  to GitHub and share.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <div>
+              <h3>Get a weekly learning plan</h3>
+              <p class="muted">One email a week with a simple schedule and project idea.</p>
+            </div>
+            <form class="news-form" action="#" method="get">
+              <label class="sr-only" for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand foot-brand">
+            <span class="brand-mark" aria-hidden="true">LH</span>
+            <span class="brand-name">LearnoHub</span>
+          </div>
+          <p class="muted">
+            A simple HTML + CSS learning website template. Customize courses, paths, and sections as
+            you like.
+          </p>
+        </div>
+
+        <div class="foot-links" aria-label="Footer links">
+          <div>
+            <div class="foot-title">Explore</div>
+            <a href="#courses">Courses</a>
+            <a href="#paths">Learning paths</a>
+            <a href="#why">Why LearnoHub?</a>
+          </div>
+          <div>
+            <div class="foot-title">Company</div>
+            <a href="#faq">FAQ</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div>
+            <div class="foot-title">Legal</div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="container foot-bottom">
+        <span class="muted">© <span id="year">2026</span> LearnoHub</span>
+        <span class="muted">Made with HTML & CSS</span>
+      </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

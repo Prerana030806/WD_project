@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="LearnoHub HTML & CSS course — modules, projects, and quiz generator." />
+    <title>HTML & CSS • LearnoHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">LH</span>
+          <span class="brand-name">LearnoHub</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="./index.html#courses">Courses</a>
+          <a href="./index.html#paths">Learning Paths</a>
+          <a href="./index.html#reviews">Reviews</a>
+          <a href="./index.html#faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-secondary" href="./login.html" data-auth="login">Login</a>
+          <a class="btn btn-ghost" href="./register.html" data-auth="register">Register</a>
+          <a class="btn btn-ghost" href="./dashboard.html" data-auth="dashboard" hidden>Dashboard</a>
+          <button class="btn btn-ghost" type="button" data-auth="logout" data-logout-redirect="./index.html" hidden>
+            Logout
+          </button>
+          <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <a href="./index.html#courses">Courses</a>
+        <a href="./index.html#paths">Learning Paths</a>
+        <a href="./index.html#reviews">Reviews</a>
+        <a href="./index.html#faq">FAQ</a>
+        <a href="./login.html" data-auth="login">Login</a>
+        <a href="./register.html" data-auth="register">Register</a>
+        <a href="./dashboard.html" data-auth="dashboard" hidden>Dashboard</a>
+        <button class="mobile-btn" type="button" data-auth="logout" data-logout-redirect="./index.html" hidden>
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <main id="main" data-course-page data-course-id="html-css" data-modules-total="5">
+      <section class="section">
+        <div class="container course-head">
+          <div>
+            <h2>HTML &amp; CSS</h2>
+            <p class="muted">
+              Learn semantic structure, modern layouts (Flexbox/Grid), and responsive UI. Build small projects and
+              test yourself with quizzes.
+            </p>
+            <div class="course-meta">
+              <span class="pill2">Beginner</span>
+              <span class="muted">• 12 lessons</span>
+              <span class="muted">• 3 projects</span>
+            </div>
+          </div>
+          <div class="course-cta">
+            <button class="btn btn-primary" type="button" data-enroll="html-css">Enroll</button>
+            <div class="muted" data-enroll-msg></div>
+          </div>
+        </div>
+
+        <div class="container course-grid">
+          <section class="panel">
+            <h3>Modules</h3>
+            <ol class="module-list">
+              <li>
+                <label class="module-title"><input type="checkbox" data-module-check="0" /> HTML Foundations</label>
+                <div class="muted">Semantic tags, headings, lists, links, images, forms.</div>
+              </li>
+              <li>
+                <label class="module-title"><input type="checkbox" data-module-check="1" /> CSS Basics</label>
+                <div class="muted">Selectors, specificity, box model, typography, colors.</div>
+              </li>
+              <li>
+                <label class="module-title"><input type="checkbox" data-module-check="2" /> Layouts</label>
+                <div class="muted">Flexbox, Grid, alignment, spacing systems.</div>
+              </li>
+              <li>
+                <label class="module-title"><input type="checkbox" data-module-check="3" /> Responsive Design</label>
+                <div class="muted">Media queries, fluid sizing, mobile-first UI.</div>
+              </li>
+              <li>
+                <label class="module-title"><input type="checkbox" data-module-check="4" /> Mini Projects</label>
+                <div class="muted">Profile page, landing page, portfolio section.</div>
+              </li>
+            </ol>
+            <div class="progress-wrap">
+              <div class="progress-bar" aria-label="Course progress bar"><span data-progress-bar></span></div>
+              <div data-progress-report></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h3>Practice + resources</h3>
+            <ul class="resource-list">
+              <li><strong>Notes:</strong> semantic HTML checklist + CSS layout cheatsheet</li>
+              <li><strong>Practice:</strong> 10 small tasks (forms, cards, navbar, grid gallery)</li>
+              <li><strong>Projects:</strong> build and deploy a portfolio homepage</li>
+              <li><strong>GitHub:</strong> upload screenshots + README for each project</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="container">
+          <section class="panel" data-quiz-gen data-course="html-css">
+            <div class="quizgen-head">
+              <div>
+                <h3>Quiz generator</h3>
+                <p class="muted">Generate a fresh set of 5 questions (randomized).</p>
+              </div>
+              <div class="quiz-tools">
+                <select class="select" data-quiz-module aria-label="Choose module for quiz">
+                  <option value="all">All modules</option>
+                  <option value="html">HTML Foundations</option>
+                  <option value="css">CSS Basics</option>
+                  <option value="layout">Layouts</option>
+                  <option value="responsive">Responsive Design</option>
+                </select>
+                <div class="quizgen-actions">
+                  <button class="btn btn-secondary" type="button" data-quiz-generate>Generate quiz</button>
+                  <button class="btn btn-primary" type="button" data-quiz-submit>Submit</button>
+                </div>
+              </div>
+            </div>
+            <div class="quiz-score" data-quiz-score></div>
+            <div class="quiz-questions" data-quiz-questions></div>
+            <div class="quiz-questions" data-quiz-key></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container foot-bottom">
+        <span class="muted">© <span id="year">2026</span> LearnoHub</span>
+        <span class="muted">Made with HTML & CSS</span>
+      </div>
+    </footer>
+
+    <script>
+      window.__QUIZ_BANK__ = {
+        "html-css": [
+          {
+            module: "html",
+            question: "Which tag represents the main content of the page?",
+            options: ["<div>", "<main>", "<span>", "<section>"],
+            answerIndex: 1,
+            reason: "<main> is meant for the unique primary content of the page (better semantics + accessibility).",
+          },
+          {
+            module: "css",
+            question: "Which CSS property controls spacing inside an element’s border?",
+            options: ["margin", "padding", "gap", "border"],
+            answerIndex: 1,
+            reason: "Padding adds inner space between content and the border; margin is outside the border.",
+          },
+          {
+            module: "layout",
+            question: "Which layout system is best for 2D rows + columns?",
+            options: ["Flexbox", "Grid", "Float", "Position"],
+            answerIndex: 1,
+            reason: "CSS Grid is designed for two-dimensional layouts (rows and columns) with precise control.",
+          },
+          {
+            module: "responsive",
+            question: "What does responsive design mainly mean?",
+            options: ["Only dark mode", "Works on different screen sizes", "Uses animations", "Uses tables"],
+            answerIndex: 1,
+            reason: "Responsive UI adapts layout/spacing/typography to different devices and screen widths.",
+          },
+          {
+            module: "responsive",
+            question: "Which unit is relative to the root font size?",
+            options: ["px", "rem", "vh", "%"],
+            answerIndex: 1,
+            reason: "rem is relative to the root (html) font size, which helps consistent scaling.",
+          },
+          {
+            module: "css",
+            question: "Which selector targets a class?",
+            options: ["#box", ".box", "box()", "@box"],
+            answerIndex: 1,
+            reason: "Class selectors start with a dot (.), while IDs start with #.",
+          },
+          {
+            module: "css",
+            question: "Which property changes text color?",
+            options: ["background", "color", "font-weight", "border"],
+            answerIndex: 1,
+            reason: "The CSS 'color' property sets the foreground (text) color.",
+          },
+          {
+            module: "layout",
+            question: "What does the box model include?",
+            options: ["Only content", "Content, padding, border, margin", "Only border", "Only margin"],
+            answerIndex: 1,
+            reason: "The box model layers are content → padding → border → margin (outside).",
+          },
+        ],
+      };
+    </script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+

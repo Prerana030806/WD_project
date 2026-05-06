@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="LearnoHub login — demo email/password auth." />
+    <title>Login • LearnoHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">LH</span>
+          <span class="brand-name">LearnoHub</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="./index.html#courses">Courses</a>
+          <a href="./index.html#paths">Learning Paths</a>
+          <a href="./index.html#reviews">Reviews</a>
+          <a href="./index.html#faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-secondary" href="./login.html" data-auth="login">Login</a>
+          <a class="btn btn-ghost" href="./register.html" data-auth="register">Register</a>
+          <a class="btn btn-ghost" href="./dashboard.html" data-auth="dashboard" hidden>Dashboard</a>
+          <button class="btn btn-ghost" type="button" data-auth="logout" data-logout-redirect="./index.html" hidden>
+            Logout
+          </button>
+          <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <a href="./index.html#courses">Courses</a>
+        <a href="./index.html#paths">Learning Paths</a>
+        <a href="./index.html#reviews">Reviews</a>
+        <a href="./index.html#faq">FAQ</a>
+        <a href="./login.html" data-auth="login">Login</a>
+        <a href="./register.html" data-auth="register">Register</a>
+        <a href="./dashboard.html" data-auth="dashboard" hidden>Dashboard</a>
+        <button class="mobile-btn" type="button" data-auth="logout" data-logout-redirect="./index.html" hidden>
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container auth-wrap">
+          <div class="auth-card">
+            <h2>Login</h2>
+            <p class="muted">Demo login using browser storage. No backend required.</p>
+
+            <form class="auth-form" data-login-form>
+              <label class="field">
+                <span>Email</span>
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label class="field">
+                <span>Password</span>
+                <input name="password" type="password" placeholder="••••••••" required minlength="4" />
+              </label>
+
+              <div class="form-row">
+                <button class="btn btn-primary" type="submit">Login</button>
+                <a class="btn btn-secondary" href="./register.html">Create account</a>
+              </div>
+
+              <div class="form-msg" data-form-msg></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container foot-bottom">
+        <span class="muted">© <span id="year">2026</span> LearnoHub</span>
+        <span class="muted">Made with HTML & CSS</span>
+      </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
